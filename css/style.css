@@ -7,20 +7,22 @@
     box-sizing: border-box;
 }
 
+
 :root {
-    --primary-color: #A19E9E;
+    /* --primary-color: #A19E9E; */
+    --primary-color: #98aa9b;
     --secondary-color: #ffffff;
     --secondary-bg: #F8F8F8;
-    --para-color: ;
-    --heading-color: #00BFFF;
+    --smallheadings-color: #f98100;
+    --heading-color: #170e80;
     --btn-color: #89CFF0;
     --btn-hover-color: #98FB98;
-    /* --btn-color-bg: ; */
     --secondary-text: #D3D3D3;
     --font-family: "Roboto", sans-serif;
     --primary-para: #808080;
     --hover-icons: #50C878;
 }
+
 
 /* .btn {} */
 
@@ -28,7 +30,7 @@
 header {
     margin: 0;
     padding: 0;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-bg);
     font-family: var(--font-family);
 
     nav {
@@ -38,7 +40,7 @@ header {
         justify-content: center;
         text-align: right;
         align-items: center;
-        background: #A19E9E;
+        background: var(--secondary-bg);
 
 
         ul {
@@ -69,6 +71,8 @@ nav .navbar-brand {
     font-size: 20px;
     font-weight: 600;
     line-height: 20px;
+    color: var(--smallheadings-color);
+    line-height: 25px;
 }
 
 header .row {
@@ -113,9 +117,14 @@ header #header_img img {
 #form input {
     margin-top: 10px;
     border: none;
-    border-top: 2px solid black;
-    border-radius: 0px;
+    border-radius: 5px;
     font-family: var(--font-family);
+    border: 2px solid var(--btn-color);
+}
+
+#form textarea {
+    border: 2px solid var(--btn-color) !important;
+
 }
 
 #form .button {
@@ -133,8 +142,13 @@ header #header_img img {
 
 .contact_methods {
     font-family: var(--font-family);
-    color: var(--primary-para);
+    color: var(--smallheadings-color);
     font-weight: 500;
+}
+
+.contact_methods span {
+
+    color: var(--primary-para);
 }
 
 .contact_methods i {
@@ -172,14 +186,23 @@ header #header_img img {
 }
 
 #form .btn {
-    height: 45px;
-    width: 120px;
-    background-color: var(--btn-color);
+
+
+    height: 55px;
+    width: 135px;
     color: black;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     font-family: var(--font-family);
+    border: 3px solid black;
+
+
 }
+
+#form_content label {
+    font-weight: 500;
+}
+
 
 #form .btn:hover {
     background-color: var(--btn-hover-color);
@@ -195,7 +218,7 @@ header #header_img img {
 
 /* <!-- <footer></footer> --> */
 
-#footer #footer_icons {
+/* #footer #footer_icons {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -237,6 +260,77 @@ header #header_img img {
 
 #footer .contact h6 {
     line-height: 30px;
+} */
+
+#footer #footer_icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+
+}
+
+#footer #footer_icons .icon_content {
+    font-weight: 400;
+    font-family: var(--font-family);
+    color: #aaa;
+}
+
+#footer #footer_icons .border_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 18px;
+
+}
+
+#footer .navbar-brand {
+    color: var(--smallheadings-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#footer .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+#footer .contact h6 {
+    line-height: 30px;
+}
+
+#footer .contact h6 span {
+    color: var(--smallheadings-color);
+    font-size: 25px;
+}
+
+#footer {
+    margin-top: 30px;
+    background-color: #808080;
+    color: var(--secondary-color);
+}
+
+#footer i:hover {
+    color: var(--smallheadings-color);
+    cursor: pointer;
+
+}
+
+#footer i {
+    font-size: 19px;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
